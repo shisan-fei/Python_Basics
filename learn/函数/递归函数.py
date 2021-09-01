@@ -10,4 +10,26 @@ def digui(num):
         digui(num-1)
     print(num)    # 0 1 2 3
 
-digui(3)
+#digui(3)
+
+#计算阶乘1*2*3*4*5*6*7
+
+def jiecheng(sum):
+    if sum > 7:
+        return 1
+    else:
+        return sum*jiecheng(sum+1)
+
+#print(jiecheng(1))
+
+def fbnq(n):
+    if n==1 or n==2:
+        return 1
+    else:
+       # print(f'fbnq(n-1) + fbnq(n-2)')
+        return fbnq(n-1) + fbnq(n-2)
+
+
+for i in range(1, 10):
+    print(fbnq(i), end=' ')
+
