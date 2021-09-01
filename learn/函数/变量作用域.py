@@ -10,5 +10,12 @@ def sum():
 
 sum()
 print(a+d)
-print(globals())   #所有全局变量
-print(locals())    #所以局部变量
+#print(globals())   #所有全局变量
+#print(locals())    #所以局部变量
+
+def wang():
+    print('hello word ')
+
+wang()
+
+
