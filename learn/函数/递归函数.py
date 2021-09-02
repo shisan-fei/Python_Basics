@@ -13,23 +13,24 @@ def digui(num):
 #digui(3)
 
 #计算阶乘1*2*3*4*5*6*7
-
 def jiecheng(sum):
-    if sum > 7:
+    if sum < 1:
         return 1
     else:
-        return sum*jiecheng(sum+1)
+        return sum*jiecheng(sum-1)
 
-#print(jiecheng(1))
+#print(jiecheng(7))
 
+#实现斐波那契数列 1 1 2 3 5 8 13 21 34……
 def fbnq(n):
     if n==1 or n==2:
         return 1
     else:
-       # print(f'fbnq(n-1) + fbnq(n-2)')
         return fbnq(n-1) + fbnq(n-2)
 
-
-for i in range(1, 10):
-    print(fbnq(i), end=' ')
+if __name__ == '__main__':
+    #digui(3)
+    print(jiecheng(7))
+    for i in range(1, 7):
+        print(fbnq(i), end=' ')
 
