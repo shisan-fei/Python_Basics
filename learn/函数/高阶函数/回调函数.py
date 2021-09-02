@@ -21,5 +21,5 @@ def jisun(x,y,z):
     '''
     print(z([x,y]))
 
-jisun(1,2,sum)
+jisun(1,2,sum)    #将1,2穿入sum函数运算
 print(sum([1,3]))   #sum用法
