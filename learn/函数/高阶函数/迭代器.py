@@ -13,7 +13,7 @@
             for: 循环编历迭代器
             特点： 不管哪个都是取出一个少一个，知道取完。
       检测迭代器和可迭代对象的方法：
-            from collections.abc import Iterator,Iterable
+                from collections.abc import Iterator,Iterable
             isinstance() ；检测一个数据是否为一个指定对象
 '''
 
