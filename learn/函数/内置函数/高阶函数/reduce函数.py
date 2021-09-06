@@ -44,3 +44,5 @@ iter1 = map(func2,'456')    #使用map函数，让func2函数处理‘456’。�
 
 iter2 = reduce(lambda i,n:i*10+n,iter1)   #使用reduce函数，将iter1元素两两传入匿名函数，返回数据
 print(iter2,type(iter2))
+
+
