@@ -37,3 +37,4 @@ print(var.isdigit())
 print(var.isspace())
 print(var.startswith('h'))
 print(var.endswith('mach'))
+
