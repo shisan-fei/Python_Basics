@@ -20,8 +20,9 @@
          4. 文件操作组合
             w r a x
             wb rb ab xb
-            w+ r+ a+ x+
+            w+ r+ a+ x+ ：w+和r+都是读写，w+会覆盖，r+会在开头添加
             wb+ rb+ ab+ xb+
+        5. seek() 设置当前指针位置
 '''
 #打开文件
 #fpw = open('name_txt','w',encoding='utf-8')
