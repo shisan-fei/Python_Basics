@@ -17,7 +17,7 @@ try:
         username=json.load(youname)
 except FileNotFoundError:
     name=input('please input you name:')
-    with open('name_txt','w') as newname:
+    with open('name_txt', 'w') as newname:
         json.dump(name,newname)
 else:
     print('hello:'+ username)
