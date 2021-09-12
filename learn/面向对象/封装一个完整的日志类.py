@@ -39,7 +39,7 @@ class wlogc():
         self.fileobj.write(msg + '\n')
         print(f'{msg}写入文件')
 
-    #定义一个析构析构方法，在程序执行完之后，对象自动销毁,文件关闭。
+    #定义一个析构方法，在程序执行完之后，对象自动销毁,文件关闭。
     def __del__(self):
         self.fileobj.close()
         print("关闭文件")
