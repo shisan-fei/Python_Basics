@@ -34,6 +34,7 @@ fpa = open('name_txt','a',encoding='utf-8')
 
 #写入内容
 fpa.write('\nguofucheng')
+fpa.seek(0)
 #print(fpr.read)
 
 #关闭文件
