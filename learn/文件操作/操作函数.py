@@ -18,11 +18,11 @@ var1 = ['aa','bb']
 #     #fp.write(var)
 #     fp.writelines(var1)
 
-# with open('name_txt','r',encoding='utf-8') as fp:
-#     fp.seek(2)          #设置指针位置
-#     print(fp.read(2))   #读取字节长度
-#     print(fp.readline())
-#     print(fp.readlines(8))
-
-with open('name_txt','r+',encoding='utf-8') as fp:
-    print(fp.truncate(1))    #目标文件就保留一个字符
+with open('name_txt','r',encoding='utf-8') as fp:
+    fp.seek(0)          #设置指针位置
+    print(fp.read(10))   #读取字节长度
+    print(fp.readline())
+    print(fp.readlines(8))
+#
+# with open('name_txt','r+',encoding='utf-8') as fp:
+#     print(fp.truncate(20))    #目标文件就保留一个字符
