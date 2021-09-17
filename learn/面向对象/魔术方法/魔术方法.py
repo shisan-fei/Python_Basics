@@ -26,5 +26,56 @@
         参数：一个self接收当前对象，其他参数根据调用需求确定
         返回值：可有可无
 
+        __len__
+        触发：   使用len函数检测当前对象时自动触发
+        作用：   检测当前对象中某个数据信息
+        参数：   一个self 接收当前对象
+        返回值： 必须有，并且必须是整型
+        注意事项： len要获取什么属性的值，就在返回值中返回属性长度
+
+        __str__
+        触发：使用str或print函数对对象进行操作触发
+        作用：代码对象进行字符串的返回，可以自定义打印信息
+        参数： 一个self，接收当前对象
+        返回值： 必须有，而且是字符串类型值
+
+        __repr__
+        触发：使用repr方法对当前对象进行装换时自动触发
+        作用：设置repr函数操作对象结果
+        参数：一个self，接收当前对象
+        返回值：必须有，是字符串
+        注意： 正常情况下，如果没有__str__方法，__repr__方法就替代__str__方法
+
+        __bool__
+        触发：使用bool函数检测当前对象时自动触发，默认情况对象转为true
+        作用：可以代替对象进行bool类型转换，可转换任何数据
+        参数：一个self
+        返回：一个bool类型
 
 '''
+
+class Deam():
+    listurl = [1,2,3]
+
+    #代替对象使用len函数，返回指定整型
+    def __len__(self):
+        return len(self.listurl)
+
+    #可以代替对象进行
+    # def __str__(self):
+    #     return '<这是当前脚本中的一个对象 str返回>'
+
+    def __repr__(self):
+        return "这是一个对象，repr返回"
+
+    def __bool__(self):
+        return bool(self.listurl)
+
+
+obj = Deam()
+print(len(obj))
+
+print(obj)   #触发str，str不在时触发repr
+
+print(bool(obj))
+
