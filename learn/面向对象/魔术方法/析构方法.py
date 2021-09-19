@@ -16,7 +16,8 @@ import time
 class writelog():
     #成员属性
     fileurl = './'   #文件路径
-    filelog = str(time.strftime('%Y-%m-%d')+'access.log')    #文件名
+    filelog = str(time.strftime('%Y-%m-%d')+'-access.log')    #文件名
+    fileobj = None
 
     #初始化，打开文件
     def __init__(self):
@@ -25,7 +26,8 @@ class writelog():
 
     #写日志
     def log(self,s):
-        print(f'把{s}写入文件')
+        self.fileobj.write(f'把{s}写入文件')
+        print('文件写入成功')
 
     #析构方法，对象销毁时，关闭文件
     def __del__(self):
@@ -33,10 +35,10 @@ class writelog():
         self.fileobj.close()
 
 
-# log = writelog()
-# log.log("日志")   #魔术方法和析构方法都会调用，文件会打开和销毁
-# #del log
-writelog()    #直接执行初始化方法和析构方法，对象没有被引用
-print("test")
+log = writelog()
+log.log("日志")   #魔术方法和析构方法都会调用，文件会打开和销毁
+# del log
+# writelog()     #直接执行初始化方法和析构方法，对象没有被引用
+# print("test")
 
 
