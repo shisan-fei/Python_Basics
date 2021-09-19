@@ -34,7 +34,7 @@
 
 #代码优化
 class Deam():
-    #定义属性存储对象，默认none.属性要私有的
+    #定义属性用来存储对象，默认none.属性要私有的
     __obj = None
     #定义一个构造方法
     def __new__(cls, *args, **kwargs):     #cls就是类名，
