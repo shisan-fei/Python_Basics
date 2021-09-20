@@ -7,5 +7,6 @@
         pip是python的包管理工具，可以解决安装过程中的依赖关系
     使用pip
         pip install 包名或库名
-
+查看是否安装了包：
+    pip show 包名/库名
 '''
