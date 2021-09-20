@@ -30,7 +30,7 @@ class Myexception():
         import logging
         #logging基本配置
         logging.basicConfig(
-            filename='./error.log',     #日志写入的文件
+            filename='error.log',     #日志写入的文件
             format='%(asctime)s %(levelname)s \n %(message)s',  #日志格式
             datefmt = '%Y-%m-%d %H:%M:%S'
         )
@@ -43,3 +43,8 @@ except:
     print('此处进行异常处理')
     Myexception()
 
+
+
+
+import  time
+print(time.strftime('%F'))
