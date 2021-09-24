@@ -15,7 +15,6 @@
     这样就完成了一部分，未完成的就是抽象方法
 '''
 import abc
-
 #如果要定义为抽象类，那么这个类的mateclass属性必须是metaclass=abc.ABCMeta
 class WriteCode(metaclass=abc.ABCMeta):
     #需要抽象的方法，使用装饰器进行装饰
