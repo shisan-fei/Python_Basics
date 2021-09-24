@@ -7,32 +7,32 @@
 '''
 
 # #方法一
-# class ScoreManage():
-#     def __get__(self, instance, owner):
-#         pass
-#     def __set__(self, instance, value):
-#         pass
-#     def __delete__(self, instance):
-#         pass
-# class Student():
-#     score = ScoreManage
+class ScoreManage():
+    def __get__(self, instance, owner):
+        pass
+    def __set__(self, instance, value):
+        pass
+    def __delete__(self, instance):
+        pass
+class Student():
+    score = ScoreManage
 
 #方法二，使用property函数
-# class Student():
-#     #在当前需要管理的类中直接定义函数方法完成修改
-#     def getscore(self):
-#         print('获取score')
-#     def setscore(self,value):
-#         print('修改score',value)
-#     def delscore(self):
-#         print('删除score')
-#     #在函数中指定三个方法,
-#     score = property(getscore,setscore,delscore)
-#
-# zsf = Student()
-# print(zsf.score)
-# zsf.score = 100
-# print(zsf.score)
+class Student():
+    #在当前需要管理的类中直接定义函数方法完成修改
+    def getscore(self):
+        print('获取score')
+    def setscore(self,value):
+        print('修改score',value)
+    def delscore(self):
+        print('删除score')
+    #在函数中指定三个方法,
+    score = property(getscore,setscore,delscore)
+
+zsf = Student()
+print(zsf.score)
+zsf.score = 100
+print(zsf.score)
 
 #方法三 使用@property装饰器语法来实现
 class Stutent():
