@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>留言板列表</title>
+</head>
+<body>
+        <center>
+            <h1 style="color:darkred;"> Hello留言板 </h1>
+            <table border="1" width="800">
+                <tr>
+                    <th>ID编号</th>
+                    <th>昵称</th>
+                    <th>留言信息</th>
+                    <th>留言时间</th>
+                </tr>
+                {% for i in data %}
+                <tr>
+                    <th>{{ i.id }}</th>
+                    <th>{{ i.nikename }}</th>
+                    <th>{{ i.info }}</th>
+                    <th>{{ i.datetime }}</th>
+                </tr>
+                {% endfor %}
+            </table>
+        </center>
+
+</body>
+</html>
