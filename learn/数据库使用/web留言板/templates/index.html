@@ -14,6 +14,7 @@
                     <th>昵称</th>
                     <th>留言信息</th>
                     <th>留言时间</th>
+                    <th>操作</th>
                 </tr>
                 {% for i in data %}
                 <tr>
@@ -21,6 +22,7 @@
                     <th>{{ i.nikename }}</th>
                     <th>{{ i.info }}</th>
                     <th>{{ i.datetime }}</th>
+                    <th><a href="/delete?id={{ i.id }}">删除</a></th>
                 </tr>
                 {% endfor %}
             </table>
