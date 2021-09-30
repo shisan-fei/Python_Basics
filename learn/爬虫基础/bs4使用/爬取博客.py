@@ -52,8 +52,8 @@ class getboke():
     def write(self):
             if self.varlist != []:
                 try:
-                    with open('boke_file.txt','a+',encoding='utf-8') as fp:
-                        json.dump(self.varlist,fp)                #将列表转换成json写入
+                    with open('boke_file.txt','w',encoding='utf-8') as fp:
+                        json.dump(self.varlist,fp,sort_keys=True,indent=2)                #将列表转换成json写入
                     return True
                 except:
                     return False
