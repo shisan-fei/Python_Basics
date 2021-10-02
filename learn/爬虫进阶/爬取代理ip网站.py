@@ -16,5 +16,6 @@ if res.status_code == 200:
 
     datas = list(zip(trs,dailis))
     print(datas)
+    print(dailis)
     # print([i.xpath('//td[1]/text()') for i in trs])
     # print(datas)
