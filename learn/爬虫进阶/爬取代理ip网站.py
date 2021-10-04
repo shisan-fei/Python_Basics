@@ -8,7 +8,8 @@ headers = {
 
 res = requests.get(url=url,headers=headers)
 if res.status_code == 200:
-    datas = res.content.decode('utf-8')
+    # datas = res.content.decode('utf-8')
+    datas = res.text
     #使用xpath解析html
     res_html = etree.HTML(datas)
     trs=res_html.xpath('//table[@class="fl-table"]//tr//td[1]/text()')     #所有ip
@@ -16,6 +17,6 @@ if res.status_code == 200:
 
     datas = list(zip(trs,dailis))
     print(datas)
-    print(dailis)
+    # print(dailis)
     # print([i.xpath('//td[1]/text()') for i in trs])
     # print(datas)

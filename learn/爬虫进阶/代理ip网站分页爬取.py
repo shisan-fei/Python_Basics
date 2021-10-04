@@ -1,4 +1,12 @@
 '''
+代理ip网站分页爬取数据后测试，将可用的ip写入文件
+    1.查找分页url变化，找出规律
+    2. 请求页面html数据
+    3. 使用xpth解析html，拿到ip数据
+    4. 根据ip支持的不同代理形式生成请求proxyip参数
+    5. 测试ip是否可以代理
+    6. main函数同一实现
+
 url: http://www.xiladaili.com/gaoni/
      http://www.xiladaili.com/gaoni/2/
      http://www.xiladaili.com/gaoni/3/
@@ -6,7 +14,6 @@ url: http://www.xiladaili.com/gaoni/
 '''
 import requests,json,time
 from lxml import etree
-
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36'
 }
