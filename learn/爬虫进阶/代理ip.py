@@ -11,8 +11,6 @@
 http://httpbin.org/get: 请求该url可以将本机请求信息返回
 '''
 import requests
-
-
 url = 'http://httpbin.org/get'
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36'
@@ -20,8 +18,8 @@ headers = {
 
 #找一个代理ip
 proxyip={
-    'http':'139.5.16.174:59933'
-    #'https':'http://47.100.14.22:9006'
+    'http':'140.255.139.115:3256'
+    # 'https':'http://60.170.152.46:38888'
 }
 try:
     res = requests.get(url=url,headers=headers,proxies=proxyip)
