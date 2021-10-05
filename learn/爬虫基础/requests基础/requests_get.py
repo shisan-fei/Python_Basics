@@ -7,7 +7,7 @@ url = 'https://www.baidu.com'
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36'
 }
-parars={
+params={
 'prod': 'pc_his',
 'from': 'pc_web',
 'json': '1',
@@ -17,8 +17,8 @@ parars={
 'req': '2',
 'csor': '0'
 }
-# res = requests.get(url=url,headers=headers,params=parars)
-res = requests.get(url=url,headers=headers)
+# res = requests.get(url=url,headers=headers,params=params)
+res = requests.get( url=url,headers=headers)
 #获取响应结果
 # print(res)            #---》<Response [200]>
 # print(res.content)   #二进制文本流
