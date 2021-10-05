@@ -11,7 +11,7 @@ text = '''
   <title>小萝卜112的个人主页_牛客网</title> 
  </head>
  <body> 
-  <div class="nk-container    "> 
+  <div class="nk-container"> 
      <a class="nowcoder-logo" href="/" title="牛客网"></a> 
      <ul class="nowcoder-navbar"> 
       <li data-type="home"><a href="/">首页</a></li> 
@@ -29,8 +29,15 @@ text = '''
 </html>
 '''
 html = etree.HTML(text)    #使用etree解析html返回html对象
-# print(html)
-print(html.xpath('/html/body/div/ul/li/a/text()'))   #--->['首页', '题库']   使用xpath获取/html/body/div/ul/li/路径下a标签所有内容
+print(html)
+# print(html.xpath('/html/body/div/ul/li/a/text()'))   #--->['首页', '题库']   使用xpath获取/html/body/div/ul/li/路径下a标签所有内容
+#
+# print(html.xpath('/html/body/div/ul/li/ul/li/a/text()'))  #--->['公司真题', '专项练习', '在线编程', '精华专题', '试题广场']
+# print(html.xpath('/html/body/div/ul/li/ul/li[1]/a/text()'))   #--->['公司真题']   可以指定li标签
 
-print(html.xpath('/html/body/div/ul/li/ul/li/a/text()'))  #--->['公司真题', '专项练习', '在线编程', '精华专题', '试题广场']
-print(html.xpath('/html/body/div/ul/li/ul/li[1]/a/text()'))   #--->['公司真题']   可以指定li标签
+print(html.xpath('/html/head/meta/@content'))    #获取属性值-->@属性
+item = html.xpath('//div[@class="nk-container"]')   #找到所有div并且class为nk-container
+for i in item:
+    # i.xpath('.//a/text()')
+    # print(i)
+    print(i.xpath('.//li/a/text()'))
