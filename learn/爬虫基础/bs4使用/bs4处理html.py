@@ -41,15 +41,20 @@ soup = BeautifulSoup(html,'lxml')
 
 #通过tag标签对象获取文档数据
 r = soup.li
-print(r)    #----><li data-type="home"><a href="/">首页</a></li>
-print(soup.li.text)   #--->获取标签中文本
+# print(r)    #----><li data-type="home"><a href="/">首页</a></li>
+# print(r.text)   #--->获取标签中文本
+# print(r['data-type'])
 #获取标签对象指定数据
-print(soup.a)        #----><a class="nowcoder-logo" href="/" title="牛客网"></a>
-print(soup.a['title'])   #牛客网
-print(soup.title.text)   #--->小萝卜112的个人主页_牛客网
-print(soup.title.parent.name)   #--->head,获取标签名
+# print(soup.a)        #----><a class="nowcoder-logo" href="/" title="牛客网"></a>
+# print(soup.a['title'])   #牛客网
 
-#通过搜索获取页面中元素
-res = soup.find('a')   #返回第一个找到的a标签
+# print(soup.title.text)   #--->小萝卜112的个人主页_牛客网
+# print(soup.title.parent.name)   #--->head,获取标签名
+#
+# 通过搜索获取页面中元素
+# res = soup.find('a')  #返回第一个找到的a标签
+# res = soup.find('a')["class"]
+
 res = soup.find_all('a')   #返回所有a标签的集合
-print(res)
+for i in res:
+    print(i['href'])
